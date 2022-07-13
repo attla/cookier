@@ -1,0 +1,41 @@
+{
+    "name": "attla/cookier",
+    "description": "Powerful wrapper for improved cookie integration on Laravel.",
+    "keywords": [
+        "attla",
+        "laravel",
+        "cookier",
+        "cookie",
+        "wrapper",
+        "manager"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Nicolau",
+            "email": "lucas@octha.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "attla/data-token": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Attla\\Cookier\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Attla\\Cookier\\ServiceProvider"
+            ],
+            "aliases": {
+                "Cookie": "Attla\\Cookier\\Facade",
+                "Cookier": "Attla\\Cookier\\Facade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
