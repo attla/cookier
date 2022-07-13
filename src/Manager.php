@@ -181,7 +181,7 @@ class Manager extends \ArrayObject
      */
     public function value($value)
     {
-        if ($jwtDecoded = Jwt::decode($value)) {
+        if ($jwtDecoded = \DataToken::decode($value)) {
             return $jwtDecoded;
         }
 
