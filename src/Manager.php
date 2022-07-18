@@ -2,6 +2,7 @@
 
 namespace Attla\Cookier;
 
+use Attla\DataToken\Facade as DataToken;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -181,7 +182,7 @@ class Manager extends \ArrayObject
      */
     public function value($value)
     {
-        if ($jwtDecoded = \DataToken::decode($value)) {
+        if ($jwtDecoded = DataToken::decode($value)) {
             return $jwtDecoded;
         }
 
